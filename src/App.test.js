@@ -49,4 +49,16 @@ describe('App', () => {
       expect(qualidadeImg).toBeInTheDocument();
       expect(qualidadeImg).toHaveAttribute('src', naruto);
     });
+
+    test('App deve renderizar experiencias anteriores', () => {
+      render(<App/> );
+      const experienciaNode = screen.getByText('Node Js');
+      const experienciaSql = screen.getByText('SQL');
+      const experienciaCSharp = screen.getByText('C#');
+      const experienciaHtml = screen.getByText('HTML, CSS e Javascript');
+      expect(experienciaNode).toBeInTheDocument();
+      expect(experienciaSql).toBeInTheDocument();
+      expect(experienciaCSharp).toBeInTheDocument();
+      expect(experienciaHtml).toBeInTheDocument();
+    });
 });

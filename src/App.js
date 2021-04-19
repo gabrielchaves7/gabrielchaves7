@@ -6,6 +6,7 @@ import determinado from './images/determinado.jpg';
 import adaptativo from './images/adaptativo.jpg';
 import aprendeRapido from './images/aprende-rapido.png';
 import naruto from './images/naruto.png';
+import ExperienciasAnteriores from './componentes/experiencias/ExperienciasAnteriores';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Qualidade titulo="Adaptativo" img={adaptativo} imgAlt="Camaleão verde."></Qualidade>
       <Qualidade titulo="Aprendo rápido" img={aprendeRapido} imgAlt="Homem focado na tela de um notebook."></Qualidade>
       <Qualidade titulo="Pareço o naruto" img={naruto} imgAlt="Personagem de um anime chamado Naruto."></Qualidade>
+      <ExperienciasAnteriores></ExperienciasAnteriores>
     </div>
   );
 }

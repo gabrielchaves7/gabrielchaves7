@@ -1,5 +1,4 @@
 import './Qualidade.css';
-import { Fragment } from 'react'
 
 function Qualidade(props){
     return (
@@ -9,8 +8,7 @@ function Qualidade(props){
             </div>
             <div className="div-img-qualidade">
                 <img src={props.img} className="img-qualidade" alt={props.imgAlt} title={props.titulo}/>
-            </div>
-            
+            </div>            
         </div>
                 
     )
