@@ -1,0 +1,13 @@
+.div-cabecalho {
+    padding: 8px;
+}
+
+.title-cabecalho{
+    border-bottom: solid black 1px;
+}
+
+.img-cabecalho {
+    margin: 8px;
+    border: solid black 2px;
+    box-shadow: 5px 5px #888888;
+}

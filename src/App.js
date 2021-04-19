@@ -1,23 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
+import Cabecalho from './componentes/cabecalho/Cabecalho';
+import Qualidade from './componentes/qualidade/Qualidade';
+import determinado from './images/determinado.jpg';
+import adaptativo from './images/adaptativo.jpg';
+import aprendeRapido from './images/aprende-rapido.png';
+import naruto from './images/naruto.png';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Cabecalho></Cabecalho>
+      <Qualidade titulo="Determinado" img={determinado} imgAlt="Esquilo da Era do Gelo se segurando na ponta de uma montanha para não cair."></Qualidade>
+      <Qualidade titulo="Adaptativo" img={adaptativo} imgAlt="Camaleão verde."></Qualidade>
+      <Qualidade titulo="Aprendo rápido" img={aprendeRapido} imgAlt="Homem focado na tela de um notebook."></Qualidade>
+      <Qualidade titulo="Pareço o naruto" img={naruto} imgAlt="Personagem de um anime chamado Naruto."></Qualidade>
     </div>
   );
 }
