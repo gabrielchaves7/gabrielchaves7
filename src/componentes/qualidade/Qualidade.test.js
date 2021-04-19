@@ -10,7 +10,7 @@ describe('Qualidade', () => {
         let imgAlt = 'Esquilo da Era do Gelo se segurando na ponta de uma montanha para não cair.';
         render(<Qualidade titulo={textoQualidade} img={determinado} imgAlt={imgAlt}/> );
         const qualidadeImg = screen.getByRole('img');
-        const qualidadeTexto = screen.getByText(textoQualidade);
+        const qualidadeTexto = screen.getByTitle(textoQualidade);
         expect(qualidadeImg).toHaveAttribute('src', 'determinado.jpg');
         expect(qualidadeImg).toHaveAttribute('alt', imgAlt, {exact: true});    
         expect(qualidadeImg).toBeInTheDocument();

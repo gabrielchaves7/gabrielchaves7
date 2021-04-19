@@ -16,7 +16,7 @@ describe('App', () => {
 
     test('App deve renderizar qualidade determinado', () => {
       render(<App/> );
-      const qualidadeTexto = screen.getByText('Determinado');
+      const qualidadeTexto = screen.getByTitle('Determinado');
       const qualidadeImg = screen.getByAltText('Esquilo da Era do Gelo se segurando na ponta de uma montanha para não cair.');
       expect(qualidadeTexto).toBeInTheDocument();
       expect(qualidadeImg).toBeInTheDocument();
@@ -25,7 +25,7 @@ describe('App', () => {
 
     test('App deve renderizar qualidade adaptativo', () => {
       render(<App/> );
-      const qualidadeTexto = screen.getByText('Adaptativo');
+      const qualidadeTexto = screen.getByTitle('Adaptativo');
       const qualidadeImg = screen.getByAltText('Camaleão verde.');
       expect(qualidadeTexto).toBeInTheDocument();
       expect(qualidadeImg).toBeInTheDocument();
@@ -34,7 +34,7 @@ describe('App', () => {
 
     test('App deve renderizar qualidade aprende rápido', () => {
       render(<App/> );
-      const qualidadeTexto = screen.getByText('Aprendo rápido');
+      const qualidadeTexto = screen.getByTitle('Aprendo rápido');
       const qualidadeImg = screen.getByAltText('Homem focado na tela de um notebook.');
       expect(qualidadeTexto).toBeInTheDocument();
       expect(qualidadeImg).toBeInTheDocument();
@@ -43,7 +43,7 @@ describe('App', () => {
 
     test('App deve renderizar qualidade pareço o naruto', () => {
       render(<App/> );
-      const qualidadeTexto = screen.getByText('Pareço o naruto');
+      const qualidadeTexto = screen.getByTitle('Pareço o naruto');
       const qualidadeImg = screen.getByAltText('Personagem de um anime chamado Naruto.');
       expect(qualidadeTexto).toBeInTheDocument();
       expect(qualidadeImg).toBeInTheDocument();

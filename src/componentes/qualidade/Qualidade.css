@@ -12,7 +12,10 @@
 }
 
 .div-img-qualidade{
-    overflow: hidden;
+    border: solid black 2px;
     border-radius: 100%;
-    display: inline-block;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
 }

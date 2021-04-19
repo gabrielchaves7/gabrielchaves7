@@ -1,16 +1,18 @@
-import determinado from '../../images/determinado.jpg';
 import './Qualidade.css';
+import { Fragment } from 'react'
 
 function Qualidade(props){
     return (
         <div>
-            <div className='div-img-qualidade'>
-                <img src={props.img} className="img-qualidade" alt={props.imgAlt}/>
+            <div className="linha-horizontal" >
+
             </div>
-            <h2>
-                {props.titulo}
-            </h2>
-        </div>        
+            <div className="div-img-qualidade">
+                <img src={props.img} className="img-qualidade" alt={props.imgAlt} title={props.titulo}/>
+            </div>
+            
+        </div>
+                
     )
 }
 
