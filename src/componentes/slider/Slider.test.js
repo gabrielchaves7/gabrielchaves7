@@ -9,47 +9,24 @@ import imgGaleria5 from "../../images/galeriaImagens4.jpg";
 describe("Slider", () => {
   global.innerWidth = 864;
 
-  test("Slider deve renderizar com título e na página inicial", () => {
-    render(<Slider />);
+  test("Slider deve renderizar com título passado pela props e na página inicial", () => {
+    render(<Slider titulo="Galeria de Imagens" />);
 
-    const sliderTitulo = screen.getByText("Slider");
+    const sliderTitulo = screen.getByText("Galeria de Imagens");
     expect(sliderTitulo).toBeInTheDocument();
 
-    const paginaAtual = screen.getByText("0");
-    expect(paginaAtual).toBeInTheDocument();
-  });
-
-  test("Slider deve avançar de página ao clicar no botão proxima pagina", () => {
-    render(<Slider />);
-
-    fireEvent.click(screen.getByTitle("Próxima página"));
     const paginaAtual = screen.getByText("1");
-    expect(paginaAtual).toBeInTheDocument();
-  });
-
-  test("Slider deve voltar de página ao clicar no botão pagina anterior", () => {
-    render(<Slider />);
-
-    let paginaAtual = screen.getByText("0");
-    expect(paginaAtual).toBeInTheDocument();
-
-    fireEvent.click(screen.getByTitle("Próxima página"));
-    paginaAtual = screen.getByText("1");
-    expect(paginaAtual).toBeInTheDocument();
-
-    fireEvent.click(screen.getByTitle("Página anterior"));
-    paginaAtual = screen.getByText("0");
     expect(paginaAtual).toBeInTheDocument();
   });
 
   test("Slider não deve voltar de página ao clicar no botão pagina anterior se a página atual for a página inicial", () => {
     render(<Slider />);
 
-    let paginaAtual = screen.getByText("0");
+    let paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
 
     fireEvent.click(screen.getByTitle("Página anterior"));
-    paginaAtual = screen.getByText("0");
+    paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
   });
 
@@ -93,5 +70,18 @@ describe("Slider", () => {
     fireEvent.click(screen.getByTitle("Página anterior"));
     imagens = screen.getAllByRole("img-slider");
     expect(imagens).toHaveLength(4);
+  });
+
+  test("Slider não deve avançar de página ao clicar no botão próxima página se não houver mais imagens", () => {
+    render(
+      <Slider imagens={[imgGaleria1, imgGaleria2, imgGaleria3, imgGaleria4]} />
+    );
+
+    let paginaAtual = screen.getByText("1");
+    expect(paginaAtual).toBeInTheDocument();
+
+    fireEvent.click(screen.getByTitle("Próxima página"));
+    paginaAtual = screen.getByText("1");
+    expect(paginaAtual).toBeInTheDocument();
   });
 });

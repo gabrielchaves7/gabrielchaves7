@@ -5,22 +5,27 @@ import "./Slider.css";
 import { IconButton } from "@material-ui/core";
 
 function Slider(props) {
-  const [pagina, setPagina] = useState(0);
+  const [pagina, setPagina] = useState(1);
   const imagensPorPagina = parseInt(window.innerWidth / 216);
+  const proximaPagina = () => {
+    if (pagina * imagensPorPagina < props.imagens?.length) {
+      setPagina(pagina + 1);
+    }
+  };
 
   return (
     <div>
-      <h2>Slider</h2>
+      <h2>{props.titulo}</h2>
       <div className="container-img">
         <IconButton
           style={{ borderRadius: "0%" }}
           title="Página anterior"
-          onClick={() => (pagina > 0 ? setPagina(pagina - 1) : null)}
+          onClick={() => (pagina > 1 ? setPagina(pagina - 1) : null)}
         >
           <ArrowBackIosIcon />
         </IconButton>
         {props.imagens
-          ?.slice(pagina * imagensPorPagina, (pagina + 1) * imagensPorPagina)
+          ?.slice((pagina - 1) * imagensPorPagina, pagina * imagensPorPagina)
           ?.map((imagem) => {
             return (
               <img
@@ -34,7 +39,9 @@ function Slider(props) {
         <IconButton
           style={{ borderRadius: "0%" }}
           title="Próxima página"
-          onClick={() => setPagina(pagina + 1)}
+          onClick={() => {
+            proximaPagina();
+          }}
         >
           <ArrowForwardIosIcon></ArrowForwardIosIcon>
         </IconButton>

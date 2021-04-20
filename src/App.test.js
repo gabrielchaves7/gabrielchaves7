@@ -6,6 +6,8 @@ import naruto from "./images/naruto.png";
 import App from "./App";
 
 describe("App", () => {
+  global.innerWidth = 864;
+
   test("App deve renderizar cabecalho com texto e imagem", () => {
     render(<App />);
     const cabecalhoTexto = screen.getByText("Quem é Gabriel Chaves?");
@@ -66,5 +68,11 @@ describe("App", () => {
     expect(experienciaSql).toBeInTheDocument();
     expect(experienciaCSharp).toBeInTheDocument();
     expect(experienciaHtml).toBeInTheDocument();
+  });
+
+  test("App deve renderizar galeria de imagens com as 4 imagens iniciais", () => {
+    render(<App />);
+    const galeriaDeImagens = screen.getAllByRole("img-slider");
+    expect(galeriaDeImagens).toHaveLength(4);
   });
 });
