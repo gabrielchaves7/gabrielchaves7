@@ -1,13 +1,17 @@
-function Experiencia(props){
-    return (
+import "./Experiencia.css";
+
+function Experiencia(props) {
+  return (
     <div>
-        <img src={props.img} alt={props.imgAlt}/>
-        <h3>{props.titulo}</h3>
-        <p>
-            {props.descricao}
-        </p>
+      <div className="container">
+        <img className="img-experiencia" src={props.img} alt={props.imgAlt} />
+        <div className="div-detalhes-experiencia">
+          <h3>{props.titulo}</h3>
+          <p>{props.descricao}</p>
+        </div>
+      </div>
     </div>
-    )
+  );
 }
 
 export default Experiencia;

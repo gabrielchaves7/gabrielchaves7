@@ -1,21 +1,21 @@
-.img-qualidade{
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    transform: scale(1);
-    transition: all 1s;
+.img-qualidade {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  transform: scale(1);
+  transition: all 1s;
 }
 
-.img-qualidade:hover{
-    transform: scale(1.5);
-    transition: all 1s;
+.img-qualidade:hover {
+  transform: scale(1.5);
+  transition: all 1s;
 }
 
-.div-img-qualidade{
-    border: solid black 2px;
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
-    margin: auto;
+.div-img-qualidade {
+  border: solid black 2px;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin: auto;
 }

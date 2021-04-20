@@ -1,12 +1,12 @@
-.title-cabecalho{
-    border-bottom: solid black 8px;
-    margin-bottom: 0px;
+.title-cabecalho {
+  border-bottom: solid black 8px;
+  margin-bottom: 0px;
 }
 
 .img-cabecalho {
-    margin: 8px;
-    border: solid black 8px;
-    box-shadow: 5px 5px #888888;
-    display: block;
-    margin: auto;
+  margin: 8px;
+  border: solid black 8px;
+  box-shadow: 5px 5px #888888;
+  display: block;
+  margin: auto;
 }
