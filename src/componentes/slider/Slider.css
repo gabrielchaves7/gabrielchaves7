@@ -1,0 +1,25 @@
+.img-slider {
+  min-width: 200px;
+  width: 200px;
+  height: 200px;
+  margin: 8px 8px 8px 8px;
+  box-shadow: 0px 0px 4px 4px #888888;
+}
+
+.container-img {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.btn-pagina-anterior {
+  position: absolute;
+  left: 0;
+  top: 100px;
+}
+
+.btn-proxima-pagina {
+  position: absolute;
+  right: 0;
+  top: 100px;
+}

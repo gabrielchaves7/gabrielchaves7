@@ -7,6 +7,19 @@ import adaptativo from "./images/adaptativo.jpg";
 import aprendeRapido from "./images/aprende-rapido.png";
 import naruto from "./images/naruto.png";
 import ExperienciasAnteriores from "./componentes/experiencias/ExperienciasAnteriores";
+import Slider from "./componentes/slider/Slider";
+import imgGaleria1 from "./images/galeriaImagens1.jpg";
+import imgGaleria2 from "./images/galeriaImagens2.JPG";
+import imgGaleria3 from "./images/galeriaImagens3.jpg";
+import imgGaleria4 from "./images/galeriaImagens4.jpg";
+import imgGaleria5 from "./images/galeriaImagens5.jpg";
+import imgGaleria6 from "./images/galeriaImagens6.jpg";
+import imgGaleria7 from "./images/galeriaImagens7.JPG";
+import imgGaleria8 from "./images/galeriaImagens8.JPG";
+import imgGaleria9 from "./images/galeriaImagens9.jpg";
+import imgGaleria10 from "./images/galeriaImagens10.JPG";
+import imgGaleria11 from "./images/galeriaImagens11.jpg";
+import imgGaleria12 from "./images/galeriaImagens12.JPG";
 
 function App() {
   return (
@@ -33,6 +46,22 @@ function App() {
         imgAlt="Personagem de um anime chamado Naruto."
       ></Qualidade>
       <ExperienciasAnteriores></ExperienciasAnteriores>
+      <Slider
+        imagens={[
+          imgGaleria1,
+          imgGaleria2,
+          imgGaleria3,
+          imgGaleria4,
+          imgGaleria5,
+          imgGaleria6,
+          imgGaleria7,
+          imgGaleria8,
+          imgGaleria9,
+          imgGaleria10,
+          imgGaleria11,
+          imgGaleria12,
+        ]}
+      ></Slider>
     </div>
   );
 }
