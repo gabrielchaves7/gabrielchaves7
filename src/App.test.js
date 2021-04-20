@@ -72,6 +72,10 @@ describe("App", () => {
 
   test("App deve renderizar galeria de imagens com as 4 imagens iniciais", () => {
     render(<App />);
+    
+    const tituloSlider = screen.getByText("Galeria de imagens");
+    expect(tituloSlider).toBeInTheDocument();
+
     const galeriaDeImagens = screen.getAllByRole("img-slider");
     expect(galeriaDeImagens).toHaveLength(4);
   });

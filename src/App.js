@@ -46,6 +46,7 @@ function App() {
       ></Qualidade>
       <ExperienciasAnteriores></ExperienciasAnteriores>
       <Slider
+      titulo="Galeria de imagens"
         imagens={[
           imgGaleria1,
           imgGaleria2,
