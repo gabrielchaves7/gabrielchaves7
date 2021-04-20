@@ -5,7 +5,6 @@ import ExperienciasAnteriores, {
   CSHARP,
   HTML,
 } from "./ExperienciasAnteriores";
-import nodejs from "../../images/nodejs.png";
 
 describe("ExperienciasAnteriores", () => {
   test("ExperienciasAnteriores deve renderizar titulo", () => {
@@ -27,6 +26,7 @@ describe("ExperienciasAnteriores", () => {
 
     const experienciaImg = screen.getByAltText(NODE_JS.imgAlt);
     expect(experienciaImg).toBeInTheDocument();
+    expect(experienciaImg).toHaveAttribute("src", "nodejs.png");
   });
 
   test("ExperienciasAnteriores deve conter experiencia SQL", () => {
@@ -40,6 +40,7 @@ describe("ExperienciasAnteriores", () => {
 
     const experienciaImg = screen.getByAltText(SQL.imgAlt);
     expect(experienciaImg).toBeInTheDocument();
+    expect(experienciaImg).toHaveAttribute("src", "sql.png");
   });
 
   test("ExperienciasAnteriores deve conter experiencia C#", () => {
@@ -53,6 +54,7 @@ describe("ExperienciasAnteriores", () => {
 
     const experienciaImg = screen.getByAltText(CSHARP.imgAlt);
     expect(experienciaImg).toBeInTheDocument();
+    expect(experienciaImg).toHaveAttribute("src", "csharp.png");
   });
 
   test("ExperienciasAnteriores deve conter experiencia HTML, CSS e Javascript", () => {
@@ -66,5 +68,12 @@ describe("ExperienciasAnteriores", () => {
 
     const experienciaImg = screen.getByAltText(HTML.imgAlt);
     expect(experienciaImg).toBeInTheDocument();
+    expect(experienciaImg).toHaveAttribute("src", "css.png");
+  });
+
+  test("ExperienciasAnteriores deve renderizar imagem do programador", () => {
+    render(<ExperienciasAnteriores />);
+    const programadorImg = screen.getByAltText("Homem programando.");
+    expect(programadorImg).toHaveAttribute("src", "programador.png");
   });
 });

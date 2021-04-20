@@ -1,3 +1,12 @@
 .div-experiencias-anteriores {
-  padding: 8px;
+  margin: 40px 8px 0 8px;
+  background-color: white;
+}
+
+.img-programador {
+  width: 100%;
+}
+
+.titulo-experiencias-anteriores {
+  padding-top: 40px;
 }

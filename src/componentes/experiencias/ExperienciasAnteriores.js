@@ -3,12 +3,20 @@ import imgNodejs from "../../images/nodejs.png";
 import imgSql from "../../images/sql.png";
 import imgCSharp from "../../images/csharp.png";
 import imgHtml from "../../images/css.png";
+import imgProgramador from "../../images/programador.png";
 import "./ExperienciasAnteriores.css";
 
 function ExperienciasAnteriores() {
   return (
     <div className="div-experiencias-anteriores">
-      <h2>Experiências Anteriores</h2>
+      <h2 className="titulo-experiencias-anteriores">
+        Experiências Anteriores
+      </h2>
+      <img
+        className="img-programador"
+        src={imgProgramador}
+        alt="Homem programando."
+      />
       <Experiencia
         titulo={NODE_JS.titulo}
         descricao={NODE_JS.descricao}
