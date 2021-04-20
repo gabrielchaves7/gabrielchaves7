@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Cabecalho from "./componentes/cabecalho/Cabecalho";
 import Qualidade from "./componentes/qualidade/Qualidade";

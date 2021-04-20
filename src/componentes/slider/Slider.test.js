@@ -22,7 +22,7 @@ describe("Slider", () => {
   test("Slider deve avançar de página ao clicar no botão proxima pagina", () => {
     render(<Slider />);
 
-    fireEvent.click(screen.getByText("Proxima pagina"));
+    fireEvent.click(screen.getByTitle("Próxima página"));
     const paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
   });
@@ -33,11 +33,11 @@ describe("Slider", () => {
     let paginaAtual = screen.getByText("0");
     expect(paginaAtual).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText("Proxima pagina"));
+    fireEvent.click(screen.getByTitle("Próxima página"));
     paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText("Pagina anterior"));
+    fireEvent.click(screen.getByTitle("Página anterior"));
     paginaAtual = screen.getByText("0");
     expect(paginaAtual).toBeInTheDocument();
   });
@@ -48,7 +48,7 @@ describe("Slider", () => {
     let paginaAtual = screen.getByText("0");
     expect(paginaAtual).toBeInTheDocument();
 
-    fireEvent.click(screen.getByText("Pagina anterior"));
+    fireEvent.click(screen.getByTitle("Página anterior"));
     paginaAtual = screen.getByText("0");
     expect(paginaAtual).toBeInTheDocument();
   });
@@ -66,7 +66,7 @@ describe("Slider", () => {
       />
     );
 
-    const imagens = screen.getAllByRole("img");
+    const imagens = screen.getAllByRole("img-slider");
     expect(imagens).toHaveLength(4);
   });
 
@@ -83,15 +83,15 @@ describe("Slider", () => {
       />
     );
 
-    let imagens = screen.getAllByRole("img");
+    let imagens = screen.getAllByRole("img-slider");
     expect(imagens).toHaveLength(4);
 
-    fireEvent.click(screen.getByText("Proxima pagina"));
-    imagens = screen.getAllByRole("img");
+    fireEvent.click(screen.getByTitle("Próxima página"));
+    imagens = screen.getAllByRole("img-slider");
     expect(imagens).toHaveLength(1);
 
-    fireEvent.click(screen.getByText("Pagina anterior"));
-    imagens = screen.getAllByRole("img");
+    fireEvent.click(screen.getByTitle("Página anterior"));
+    imagens = screen.getAllByRole("img-slider");
     expect(imagens).toHaveLength(4);
   });
 });

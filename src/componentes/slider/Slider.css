@@ -12,14 +12,6 @@
   position: relative;
 }
 
-.btn-pagina-anterior {
-  position: absolute;
-  left: 0;
-  top: 100px;
-}
-
-.btn-proxima-pagina {
-  position: absolute;
-  right: 0;
-  top: 100px;
+.btn-icon {
+  border-radius: 0% !important;
 }
