@@ -28,6 +28,11 @@
   background-color: blue;
 }
 
-.div-numeracao-slider{
+.div-numeracao-slider {
   margin-bottom: 56px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
 }

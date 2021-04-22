@@ -8,14 +8,14 @@ function Slider(props) {
   const [pagina, setPagina] = useState(1);
   const [windowSize, setWindowSize] = useState(window.innerWidth);
   const [imagensPorPagina, setImagensPorPagina] = useState(
-    parseInt(windowSize / 216)
+    parseInt((windowSize - 96) / 216)
   );
 
   useLayoutEffect(() => {
     function handleResize() {
       console.log(window.innerWidth);
       setWindowSize(window.innerWidth);
-      setImagensPorPagina(parseInt(window.innerWidth / 216));
+      setImagensPorPagina(parseInt((window.innerWidth - 96) / 216));
     }
 
     window.addEventListener("resize", handleResize);
@@ -40,7 +40,7 @@ function Slider(props) {
   return (
     <div>
       <h2>{props.titulo}</h2>
-      <div className="container-img">
+      <div className="container">
         <IconButton
           style={{ borderRadius: "0%" }}
           title="Página anterior"
@@ -48,18 +48,20 @@ function Slider(props) {
         >
           <ArrowBackIosIcon />
         </IconButton>
-        {props.imagens
-          ?.slice((pagina - 1) * imagensPorPagina, pagina * imagensPorPagina)
-          ?.map((imagem) => {
-            return (
-              <img
-                key={imagem}
-                className="img-slider"
-                role="img-slider"
-                src={imagem}
-              ></img>
-            );
-          })}
+        <div className="container-img">
+          {props.imagens
+            ?.slice((pagina - 1) * imagensPorPagina, pagina * imagensPorPagina)
+            ?.map((imagem) => {
+              return (
+                <img
+                  key={imagem}
+                  className="img-slider"
+                  role="img-slider"
+                  src={imagem}
+                ></img>
+              );
+            })}
+        </div>
         <IconButton
           style={{ borderRadius: "0%" }}
           title="Próxima página"

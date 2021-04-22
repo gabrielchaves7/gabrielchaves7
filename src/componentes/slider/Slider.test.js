@@ -7,7 +7,7 @@ import imgGaleria4 from "../../images/galeriaImagens4.jpg";
 import imgGaleria5 from "../../images/galeriaImagens4.jpg";
 
 describe("Slider", () => {
-  global.innerWidth = 864;
+  global.innerWidth = 960;
 
   test("Slider deve renderizar com título passado pela props e na página inicial", () => {
     render(<Slider titulo="Galeria de Imagens" imagens={[imgGaleria1]} />);
