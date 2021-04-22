@@ -7,4 +7,53 @@ describe("EntreEmContato", () => {
     const imagens = screen.getAllByRole("img");
     expect(imagens).toHaveLength(3);
   });
+
+  test("EntreEmContato deve ter imagens com títulos descritivos do github, linkedin e twitter", () => {
+    render(<EntreEmContato />);
+    const tituloGithub = screen.getByTitle(
+      "Logo do github que redireciona para https://github.com/gabrielchaves7"
+    );
+    const tituloLinkedin = screen.getByTitle(
+      "Logo do linkedin que redireciona para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
+    );
+    const tituloTwitter = screen.getByTitle(
+      "Logo do twitter que redireciona para https://twitter.com/ChavessKeys"
+    );
+    expect(tituloGithub).toBeInTheDocument();
+    expect(tituloLinkedin).toBeInTheDocument();
+    expect(tituloTwitter).toBeInTheDocument();
+  });
+
+  test("Imagem do github deve ter href para https://github.com/gabrielchaves7", () => {
+    render(<EntreEmContato />);
+    const tituloGithub = screen.getByTitle(
+      "Logo do github que redireciona para https://github.com/gabrielchaves7"
+    );
+    expect(tituloGithub.closest("a")).toHaveAttribute(
+      "href",
+      "https://github.com/gabrielchaves7"
+    );
+  });
+
+  test("Imagem do linkedin deve ter href para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/", () => {
+    render(<EntreEmContato />);
+    const tituloLinkedin = screen.getByTitle(
+      "Logo do linkedin que redireciona para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
+    );
+    expect(tituloLinkedin.closest("a")).toHaveAttribute(
+      "href",
+      "https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
+    );
+  });
+
+  test("Imagem do twitter deve ter href para https://twitter.com/ChavessKeys", () => {
+    render(<EntreEmContato />);
+    const tituloTwitter = screen.getByTitle(
+      "Logo do twitter que redireciona para https://twitter.com/ChavessKeys"
+    );
+    expect(tituloTwitter.closest("a")).toHaveAttribute(
+      "href",
+      "https://twitter.com/ChavessKeys"
+    );
+  });
 });
