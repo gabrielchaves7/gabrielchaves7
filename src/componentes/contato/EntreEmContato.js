@@ -5,7 +5,7 @@ import twitter from "../../images/twiter.png";
 
 function EntreEmContato() {
   return (
-    <div class="div-entre-em-contato">
+    <div className="div-entre-em-contato">
       <h2>Entre em contato</h2>
       <a href="https://github.com/gabrielchaves7" target="_blank">
         <img
