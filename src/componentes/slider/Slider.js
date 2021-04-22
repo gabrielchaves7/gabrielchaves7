@@ -53,12 +53,11 @@ function Slider(props) {
           <ArrowForwardIosIcon></ArrowForwardIosIcon>
         </IconButton>
       </div>
-      <p>{pagina}</p>
       <div>
         {[...Array(numeroPaginas)].map((it, index) => {
           return (
             <span
-              title="Numeração das imagens"
+              title={`Slider de imagens página ${index + 1}`}
               className={`numeracao-slider ${
                 index + 1 == pagina ? "selected" : ""
               }`}
