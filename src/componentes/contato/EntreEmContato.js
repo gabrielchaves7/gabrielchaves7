@@ -5,8 +5,9 @@ import twitter from "../../images/twiter.png";
 
 function EntreEmContato() {
   return (
-    <div>
-      <a href="https://github.com/gabrielchaves7">
+    <div class="div-entre-em-contato">
+      <h2>Entre em contato</h2>
+      <a href="https://github.com/gabrielchaves7" target="_blank">
         <img
           src={github}
           className="img-entre-em-contato"
@@ -14,14 +15,14 @@ function EntreEmContato() {
         />
       </a>
 
-      <a href="https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/">
+      <a href="https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/" target="_blank">
         <img
           src={linkedin}
           className="img-entre-em-contato"
           title="Logo do linkedin que redireciona para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
         />
       </a>
-      <a href="https://twitter.com/ChavessKeys">
+      <a href="https://twitter.com/ChavessKeys" target="_blank">
         <img
           src={twitter}
           className="img-entre-em-contato"

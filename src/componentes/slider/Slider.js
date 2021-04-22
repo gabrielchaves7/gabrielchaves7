@@ -70,7 +70,7 @@ function Slider(props) {
           <ArrowForwardIosIcon></ArrowForwardIosIcon>
         </IconButton>
       </div>
-      <div>
+      <div className="div-numeracao-slider">
         {[...Array(numeroPaginas)].map((it, index) => {
           return (
             <span

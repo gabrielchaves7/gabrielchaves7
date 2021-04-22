@@ -79,4 +79,11 @@ describe("App", () => {
     const galeriaDeImagens = screen.getAllByRole("img-slider");
     expect(galeriaDeImagens).toHaveLength(4);
   });
+
+  test("App deve renderizar EntreEmContato", () => {
+    render(<App />);
+    
+    const entreEmContato = screen.getByText("Entre em contato");
+    expect(entreEmContato).toBeInTheDocument();
+  });
 });

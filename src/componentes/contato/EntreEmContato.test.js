@@ -2,8 +2,12 @@ import { render, screen } from "@testing-library/react";
 import EntreEmContato from "./EntreEmContato";
 
 describe("EntreEmContato", () => {
-  test("EntreEmContato deve renderizar imagem do github, linkedin e twitter", () => {
+  test("EntreEmContato deve renderizar titulo Entre em contato com imagem do github, linkedin e twitter", () => {
     render(<EntreEmContato />);
+
+    const titulo = screen.getByText("Entre em contato");
+    expect(titulo).toBeInTheDocument();
+
     const imagens = screen.getAllByRole("img");
     expect(imagens).toHaveLength(3);
   });
@@ -33,6 +37,11 @@ describe("EntreEmContato", () => {
       "href",
       "https://github.com/gabrielchaves7"
     );
+
+    expect(tituloGithub.closest("a")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
   });
 
   test("Imagem do linkedin deve ter href para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/", () => {
@@ -44,6 +53,10 @@ describe("EntreEmContato", () => {
       "href",
       "https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
     );
+    expect(tituloLinkedin.closest("a")).toHaveAttribute(
+      "target",
+      "_blank"
+    );
   });
 
   test("Imagem do twitter deve ter href para https://twitter.com/ChavessKeys", () => {
@@ -54,6 +67,10 @@ describe("EntreEmContato", () => {
     expect(tituloTwitter.closest("a")).toHaveAttribute(
       "href",
       "https://twitter.com/ChavessKeys"
+    );
+    expect(tituloTwitter.closest("a")).toHaveAttribute(
+      "target",
+      "_blank"
     );
   });
 });

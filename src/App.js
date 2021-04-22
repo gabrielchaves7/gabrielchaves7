@@ -19,6 +19,7 @@ import imgGaleria9 from "./images/galeriaImagens9.jpg";
 import imgGaleria10 from "./images/galeriaImagens10.JPG";
 import imgGaleria11 from "./images/galeriaImagens11.jpg";
 import imgGaleria12 from "./images/galeriaImagens12.JPG";
+import EntreEmContato from "./componentes/contato/EntreEmContato";
 
 function App() {
   return (
@@ -62,6 +63,7 @@ function App() {
           imgGaleria12,
         ]}
       ></Slider>
+      <EntreEmContato />
     </div>
   );
 }
