@@ -10,3 +10,18 @@
   display: block;
   margin: auto;
 }
+
+@media only screen and (min-width: 659px) {
+  .div-cabecalho {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-cabecalho {
+    margin-top: 0px;
+  }
+
+  .div-titulo-cabecalho {
+    flex: 1;
+  }
+}

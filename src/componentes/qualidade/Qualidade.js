@@ -2,7 +2,7 @@ import "./Qualidade.css";
 
 function Qualidade(props) {
   return (
-    <div>
+    <div className="div-qualidade">
       <div className="linha-horizontal"></div>
       <div className="div-img-qualidade">
         <img

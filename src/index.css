@@ -19,3 +19,9 @@ code {
   background-color: black;
   margin: auto;
 }
+
+@media only screen and (min-width: 659px) {
+  .linha-horizontal {
+    display: none;
+  }
+}

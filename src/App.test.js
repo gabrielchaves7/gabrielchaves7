@@ -6,7 +6,7 @@ import naruto from "./images/naruto.png";
 import App from "./App";
 
 describe("App", () => {
-  global.innerWidth = 864;
+  global.innerWidth = 960;
 
   test("App deve renderizar cabecalho com texto e imagem", () => {
     render(<App />);
@@ -72,7 +72,7 @@ describe("App", () => {
 
   test("App deve renderizar galeria de imagens com as 4 imagens iniciais", () => {
     render(<App />);
-    
+
     const tituloSlider = screen.getByText("Galeria de imagens");
     expect(tituloSlider).toBeInTheDocument();
 
@@ -82,7 +82,7 @@ describe("App", () => {
 
   test("App deve renderizar EntreEmContato", () => {
     render(<App />);
-    
+
     const entreEmContato = screen.getByText("Entre em contato");
     expect(entreEmContato).toBeInTheDocument();
   });
