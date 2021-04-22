@@ -7,7 +7,7 @@ function EntreEmContato() {
   return (
     <div className="div-entre-em-contato">
       <h2>Entre em contato</h2>
-      <a href="https://github.com/gabrielchaves7" target="_blank">
+      <a href="https://github.com/gabrielchaves7" target="_blank" rel="noopener">
         <img
           src={github}
           className="img-entre-em-contato"
@@ -15,14 +15,14 @@ function EntreEmContato() {
         />
       </a>
 
-      <a href="https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/" target="_blank">
+      <a href="https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/" target="_blank" rel="noopener">
         <img
           src={linkedin}
           className="img-entre-em-contato"
           title="Logo do linkedin que redireciona para https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/"
         />
       </a>
-      <a href="https://twitter.com/ChavessKeys" target="_blank">
+      <a href="https://twitter.com/ChavessKeys" target="_blank" rel="noopener">
         <img
           src={twitter}
           className="img-entre-em-contato"
