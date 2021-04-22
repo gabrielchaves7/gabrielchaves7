@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import "./Slider.css";
@@ -6,8 +6,25 @@ import { IconButton } from "@material-ui/core";
 
 function Slider(props) {
   const [pagina, setPagina] = useState(1);
+  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  const [imagensPorPagina, setImagensPorPagina] = useState(
+    parseInt(windowSize / 216)
+  );
 
-  const imagensPorPagina = parseInt(window.innerWidth / 216);
+  useLayoutEffect(() => {
+    function handleResize() {
+      console.log(window.innerWidth);
+      setWindowSize(window.innerWidth);
+      setImagensPorPagina(parseInt(window.innerWidth / 216));
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   const numeroImagens = props.imagens?.length;
 
   const proximaPagina = () => {
@@ -36,10 +53,10 @@ function Slider(props) {
           ?.map((imagem) => {
             return (
               <img
+                key={imagem}
                 className="img-slider"
                 role="img-slider"
                 src={imagem}
-                data-test
               ></img>
             );
           })}
@@ -57,9 +74,10 @@ function Slider(props) {
         {[...Array(numeroPaginas)].map((it, index) => {
           return (
             <span
+              key={`pagina-${index}`}
               title={`Slider de imagens página ${index + 1}`}
               className={`numeracao-slider ${
-                index + 1 == pagina ? "selected" : ""
+                index + 1 === pagina ? "selected" : ""
               }`}
             ></span>
           );
