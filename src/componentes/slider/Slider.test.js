@@ -10,7 +10,7 @@ describe("Slider", () => {
   global.innerWidth = 864;
 
   test("Slider deve renderizar com título passado pela props e na página inicial", () => {
-    render(<Slider titulo="Galeria de Imagens" />);
+    render(<Slider titulo="Galeria de Imagens" imagens={[]} />);
 
     const sliderTitulo = screen.getByText("Galeria de Imagens");
     expect(sliderTitulo).toBeInTheDocument();
@@ -20,7 +20,7 @@ describe("Slider", () => {
   });
 
   test("Slider não deve voltar de página ao clicar no botão pagina anterior se a página atual for a página inicial", () => {
-    render(<Slider />);
+    render(<Slider imagens={[]} />);
 
     let paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
@@ -83,5 +83,22 @@ describe("Slider", () => {
     fireEvent.click(screen.getByTitle("Próxima página"));
     paginaAtual = screen.getByText("1");
     expect(paginaAtual).toBeInTheDocument();
+  });
+
+  test("Slider deve exibir contador de páginas baseado no numero de imagens que cabem na tela", () => {
+    render(
+      <Slider
+        imagens={[
+          imgGaleria1,
+          imgGaleria2,
+          imgGaleria3,
+          imgGaleria4,
+          imgGaleria5,
+        ]}
+      />
+    );
+
+    let contador = screen.getAllByTitle("Numeração das imagens");
+    expect(contador).toHaveLength(2);
   });
 });

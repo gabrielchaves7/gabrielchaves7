@@ -6,12 +6,19 @@ import { IconButton } from "@material-ui/core";
 
 function Slider(props) {
   const [pagina, setPagina] = useState(1);
+
   const imagensPorPagina = parseInt(window.innerWidth / 216);
+  const numeroImagens = props.imagens?.length;
+
   const proximaPagina = () => {
-    if (pagina * imagensPorPagina < props.imagens?.length) {
+    if (pagina * imagensPorPagina < numeroImagens) {
       setPagina(pagina + 1);
     }
   };
+
+  let numeroPaginas = parseInt(numeroImagens / imagensPorPagina);
+  let sobrouImagens = numeroImagens % imagensPorPagina > 0;
+  numeroPaginas = numeroPaginas + (sobrouImagens ? 1 : 0);
 
   return (
     <div>
@@ -47,6 +54,18 @@ function Slider(props) {
         </IconButton>
       </div>
       <p>{pagina}</p>
+      <div>
+        {[...Array(numeroPaginas)].map((it, index) => {
+          return (
+            <span
+              title="Numeração das imagens"
+              className={`numeracao-slider ${
+                index + 1 == pagina ? "selected" : ""
+              }`}
+            ></span>
+          );
+        })}
+      </div>
     </div>
   );
 }
