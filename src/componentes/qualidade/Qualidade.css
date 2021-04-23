@@ -28,7 +28,10 @@
 }
 
 @media only screen and (min-width: 659px) {
-  .titulo-qualidade{
-    display:block !important;
+  .titulo-qualidade {
+    display: block !important;
+    color: grey;
+    font-weight: bold;
+    font-size: 1.5em;
   }
 }
