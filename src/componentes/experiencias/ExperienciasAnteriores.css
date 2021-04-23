@@ -11,7 +11,7 @@
   padding-top: 40px;
 }
 
-@media only screen and (min-width: 659px) and (max-width: 999px){
+@media only screen and (min-width: 659px) and (max-width: 999px) {
   .img-programador {
     height: 600px;
     width: 600px;
@@ -33,7 +33,7 @@
   }
 }
 
-@media only screen and (min-width: 999px) and (max-width: 1315px){
+@media only screen and (min-width: 999px) and (max-width: 1315px) {
   .img-programador {
     height: 100%;
   }

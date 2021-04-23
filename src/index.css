@@ -25,3 +25,10 @@ code {
     display: none;
   }
 }
+
+h3 {
+  color: rgb(135, 147, 149);
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
