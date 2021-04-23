@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import Slider from "./Slider";
-import imgGaleria1 from "../../images/galeriaImagens1.jpg";
-import imgGaleria2 from "../../images/galeriaImagens2.jpg";
-import imgGaleria3 from "../../images/galeriaImagens3.jpg";
-import imgGaleria4 from "../../images/galeriaImagens4.jpg";
-import imgGaleria5 from "../../images/galeriaImagens4.jpg";
+import imgGaleria1 from "../../images/imagem1.jpg";
+import imgGaleria2 from "../../images/imagem2.jpg";
+import imgGaleria3 from "../../images/imagem3.jpg";
+import imgGaleria4 from "../../images/imagem4.jpg";
+import imgGaleria5 from "../../images/imagem4.jpg";
 
 describe("Slider", () => {
   global.innerWidth = 1056;
