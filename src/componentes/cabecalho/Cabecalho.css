@@ -15,6 +15,7 @@
   .div-cabecalho {
     display: flex;
     align-items: center;
+    margin-bottom: 56px;
   }
 
   .title-cabecalho {

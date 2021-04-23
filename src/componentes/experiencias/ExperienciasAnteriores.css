@@ -10,3 +10,37 @@
 .titulo-experiencias-anteriores {
   padding-top: 40px;
 }
+
+@media only screen and (min-width: 659px) and (max-width: 999px){
+  .img-programador {
+    height: 600px;
+    width: 600px;
+  }
+}
+
+@media only screen and (min-width: 999px) {
+  .div-img-experiencias {
+    display: flex;
+  }
+
+  .div-experiencias {
+    flex: 1;
+    order: 1;
+  }
+  .div-img-programador {
+    flex: 1;
+    order: 2;
+  }
+}
+
+@media only screen and (min-width: 999px) and (max-width: 1315px){
+  .img-programador {
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1315px) {
+  .img-programador {
+    height: 700px;
+  }
+}

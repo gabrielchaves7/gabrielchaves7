@@ -17,3 +17,9 @@
   text-align: left;
   flex: 5;
 }
+
+@media only screen and (min-width: 999px) {
+  .container {
+    height: 25%;
+  }
+}

@@ -12,35 +12,42 @@ function ExperienciasAnteriores() {
       <h2 className="titulo-experiencias-anteriores">
         Experiências Anteriores
       </h2>
-      <img
-        className="img-programador"
-        src={imgProgramador}
-        alt="Homem programando."
-      />
-      <Experiencia
-        titulo={NODE_JS.titulo}
-        descricao={NODE_JS.descricao}
-        img={NODE_JS.img}
-        imgAlt={NODE_JS.imgAlt}
-      />
-      <Experiencia
-        titulo={SQL.titulo}
-        descricao={SQL.descricao}
-        img={SQL.img}
-        imgAlt={SQL.imgAlt}
-      />
-      <Experiencia
-        titulo="C#"
-        descricao={CSHARP.descricao}
-        img={CSHARP.img}
-        imgAlt={CSHARP.imgAlt}
-      />
-      <Experiencia
-        titulo="HTML, CSS e Javascript"
-        descricao={HTML.descricao}
-        img={HTML.img}
-        imgAlt={HTML.imgAlt}
-      />
+      <div className="div-img-experiencias">
+        <div className="div-img-programador">
+          <img
+            className="img-programador"
+            src={imgProgramador}
+            alt="Homem programando."
+          />
+        </div>
+
+        <div className="div-experiencias">
+          <Experiencia
+            titulo={NODE_JS.titulo}
+            descricao={NODE_JS.descricao}
+            img={NODE_JS.img}
+            imgAlt={NODE_JS.imgAlt}
+          />
+          <Experiencia
+            titulo={SQL.titulo}
+            descricao={SQL.descricao}
+            img={SQL.img}
+            imgAlt={SQL.imgAlt}
+          />
+          <Experiencia
+            titulo="C#"
+            descricao={CSHARP.descricao}
+            img={CSHARP.img}
+            imgAlt={CSHARP.imgAlt}
+          />
+          <Experiencia
+            titulo="HTML, CSS e Javascript"
+            descricao={HTML.descricao}
+            img={HTML.img}
+            imgAlt={HTML.imgAlt}
+          />
+        </div>
+      </div>
     </div>
   );
 }
