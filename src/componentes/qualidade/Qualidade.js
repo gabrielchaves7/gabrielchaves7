@@ -12,6 +12,7 @@ function Qualidade(props) {
           title={props.titulo}
         />
       </div>
+      <p className="titulo-qualidade" style={{display: 'none'}}>{props.titulo}</p>
     </div>
   );
 }

@@ -10,11 +10,35 @@ describe("Qualidade", () => {
     render(
       <Qualidade titulo={textoQualidade} img={determinado} imgAlt={imgAlt} />
     );
-    const qualidadeImg = screen.getByRole("img");
-    const qualidadeTexto = screen.getByTitle(textoQualidade);
-    expect(qualidadeImg).toHaveAttribute("src", "determinado.jpg");
-    expect(qualidadeImg).toHaveAttribute("alt", imgAlt, { exact: true });
-    expect(qualidadeImg).toBeInTheDocument();
-    expect(qualidadeTexto).toBeInTheDocument();
+    const img = screen.getByRole("img");
+    expect(img).toHaveAttribute("src", "determinado.jpg");
+    expect(img).toHaveAttribute("alt", imgAlt, { exact: true });
+    expect(img).toBeInTheDocument();
+
+    const imgTitulo = screen.getByTitle(textoQualidade);
+    expect(imgTitulo).toBeInTheDocument();
+  });
+
+  test("Qualidade deve renderizar titulo em telas com mais de 659px", () => {
+    global.innerWidth = 660;
+    let textoQualidade = "Determinado";
+    render(
+      <Qualidade titulo={textoQualidade} img={determinado} />
+    );
+
+    const titulo = screen.getByText(textoQualidade);
+    expect(titulo).toBeInTheDocument();
+  });
+
+
+  test("Qualidade não deve renderizar titulo em telas com menos de 659px", () => {
+    global.innerWidth = 650;
+    let textoQualidade = "Determinado";
+    render(
+      <Qualidade titulo={textoQualidade} img={determinado} />
+    );
+
+    const titulo = screen.getByText(textoQualidade);
+    expect(titulo).not.toBeVisible();
   });
 });
