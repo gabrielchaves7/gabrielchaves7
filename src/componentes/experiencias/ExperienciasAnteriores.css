@@ -31,6 +31,13 @@
     flex: 1;
     order: 2;
   }
+  .div-experiencias-anteriores {
+    margin: 0 48px 0 48px;
+  }
+
+  .div-experiencias {
+    padding-left: 48px;
+  }
 }
 
 @media only screen and (min-width: 999px) and (max-width: 1315px) {

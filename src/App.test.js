@@ -6,7 +6,7 @@ import naruto from "./images/naruto.png";
 import App from "./App";
 
 describe("App", () => {
-  global.innerWidth = 960;
+  global.innerWidth = 1056;
 
   test("App deve renderizar cabecalho com texto e imagem", () => {
     render(<App />);
