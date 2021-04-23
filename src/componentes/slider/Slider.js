@@ -10,7 +10,7 @@ function Slider(props) {
   const tamanhoSetas = 96;
   let tamanhoMargem = window.innerWidth >= 999 ? 96 : 0;
   const [imagensPorPagina, setImagensPorPagina] = useState(
-    parseInt((windowSize - tamanhoSetas + tamanhoMargem) / 216)
+    parseInt((windowSize - (tamanhoSetas + tamanhoMargem)) / 216)
   );
 
   useLayoutEffect(() => {
