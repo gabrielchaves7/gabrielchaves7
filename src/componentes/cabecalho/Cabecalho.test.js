@@ -6,7 +6,7 @@ describe("Cabecalho", () => {
     render(<Cabecalho />);
     const cabecalhoImg = screen.getByRole("img");
     const cabecalhoTexto = screen.getByText("Quem é Gabriel Chaves?");
-    expect(cabecalhoImg).toHaveAttribute("src", "rosto.jpg");
+    expect(cabecalhoImg).toHaveAttribute("src", "rosto.jfif");
     expect(cabecalhoImg).toHaveAttribute("alt", "Imagem de Gabriel Chaves");
     expect(cabecalhoImg).toBeInTheDocument();
     expect(cabecalhoTexto).toBeInTheDocument();

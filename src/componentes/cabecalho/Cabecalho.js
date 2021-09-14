@@ -1,4 +1,4 @@
-import rosto from "../../images/rosto.jpg";
+import rosto from "../../images/rosto.jfif";
 import "./Cabecalho.css";
 
 function Cabecalho() {
