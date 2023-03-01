@@ -1,5 +1,5 @@
 # Sobre
-Trabalhei alguns anos como fullstack e agora estou me aventurando em Flutter.
+Software Developer. Flutter <3
 
 <a href = "mailto:gabrielbum@gmail.com"><img src="https://img.shields.io/badge/-Gmail-%23333?style=for-the-badge&logo=gmail&logoColor=white" target="_blank"></a>
 <a href="https://www.linkedin.com/in/gabriel-chaves-ferreira-ba0318169/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a> 
